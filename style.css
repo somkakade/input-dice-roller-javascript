@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+body {
+    font-family: 'Protest Revolution', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #8CB9BD;
+    padding: 15px;
+    width: 400px;
+}
+.diceImage{
+    width: 100px;
+    max-width: 100px;
+}
+button#diceBtn {
+    background-color: #436850;
+    color: #fff;
+    border: 1px solid #436850;
+    padding: 9px 31px;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+input#inputText {
+    height: 34px;
+    width: 64%;
+}
