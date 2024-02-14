@@ -12,17 +12,27 @@ let result;
 // Event
 
 
+
 diceBtn.onclick = function () {
+
     result = Number(inputText.value);
-    if (result <= 6) {
-        diceNumResult.textContent = result;
-        diceImg.setAttribute("src",`${result}.svg`);
+    if(result==""){
+        error.textContent = `Please add value`;
     }
-    // else if(result>=6){
-    //     diceNumResult.textContent = `Something went wrong`;
-    //     diceImg.setAttribute("src",``);
-    // }
+    else if(result<0){
+        diceImg.setAttribute("src", `sorry.png`);
+        error.textContent = `Please choose "CORRECT" options`;
+    }
+    else if (result <= 6) {
+        diceNumResult.textContent = result;
+        diceImg.setAttribute("src", `${result}.svg`);
+        inputText.value="";
+      
+    }
     else {
-        error.textContent = `Please Select Right Options`
+        // diceNumResult.textContent = `Please add value`;
+        error.textContent = `Please Select Right Options`;
+        diceImg.setAttribute("src", `something-went-wrong.png`);
+        inputText.value="";
     }
 }
