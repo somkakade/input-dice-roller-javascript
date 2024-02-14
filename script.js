@@ -26,11 +26,12 @@ diceBtn.onclick = function () {
     else if (result <= 6) {
         diceNumResult.textContent = result;
         diceImg.setAttribute("src", `${result}.svg`);
+        error.textContent = "";
         inputText.value="";
       
     }
     else {
-        // diceNumResult.textContent = `Please add value`;
+        diceNumResult.textContent ="";
         error.textContent = `Please Select Right Options`;
         diceImg.setAttribute("src", `something-went-wrong.png`);
         inputText.value="";
