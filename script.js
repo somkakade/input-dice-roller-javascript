@@ -17,11 +17,16 @@ diceBtn.onclick = function () {
 
     result = Number(inputText.value);
     if(result==""){
+        diceNumResult.textContent = "";
         error.textContent = `Please add value`;
+        diceImg.setAttribute("src", `sorry.png`);
+        error.textContent = `Please choose "CORRECT" options`;
+        inputText.value="";
     }
     else if(result<0){
         diceImg.setAttribute("src", `sorry.png`);
         error.textContent = `Please choose "CORRECT" options`;
+        inputText.value="";
     }
     else if (result <= 6) {
         diceNumResult.textContent = result;
